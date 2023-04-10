@@ -1,4 +1,4 @@
-package com.example.arnahome.ui.notifications
+package com.example.arnahome.ui.main.notifications
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

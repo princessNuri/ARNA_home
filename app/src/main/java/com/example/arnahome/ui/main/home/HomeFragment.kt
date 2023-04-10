@@ -1,4 +1,4 @@
-package com.example.arnahome.ui.home
+package com.example.arnahome.ui.main.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
