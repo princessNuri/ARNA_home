@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ARNA home</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="make_your">MAKE YOUR</string>
+    <string name="home_beautiful">HOME BEAUTIFUL</string>
+    <string name="get_started">Get Started</string>
+    <string name="onboard">The best simple place where you discover most wonderful furnitures and make your home beautiful</string>
+    <string name="popular">Popular</string>
+</resources>
