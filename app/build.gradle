@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -22,6 +23,10 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        debug {
+            minifyEnabled false
+            buildConfigField('String', 'BASE_URL', "\"http://164.92.190.147:8880/\"")
+        }
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -37,16 +42,60 @@ android {
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.core:core-ktx:1.10.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.0'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.0'
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+    implementation 'androidx.databinding:databinding-runtime:7.4.2'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    // View Binding property delegate (reflection-free flavor)
+    implementation 'com.github.kirich1409:viewbindingpropertydelegate-noreflection:1.5.8'
+
+    // Navigation Component
+    def nav_version = "2.5.3"
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    // Hilt
+    def hilt_version = "2.44.2"
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
+
+    // Retrofit & OkHTTP
+    def retrofit_version = "2.9.0"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+
+    def okhttp_version = "5.0.0-alpha.10"
+    implementation "com.squareup.okhttp3:okhttp:$okhttp_version"
+    implementation "com.squareup.okhttp3:okhttp-bom:$okhttp_version"
+    implementation "com.squareup.okhttp3:logging-interceptor"
+
+    // Paging 3
+    implementation "androidx.paging:paging-common-ktx:3.1.1"
+    implementation "androidx.paging:paging-runtime:3.1.1"
+
+    // Glide
+    implementation "com.github.bumptech.glide:glide:4.15.0"
+
+    // Dots indicator
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+    implementation 'com.tbuonomo:dotsindicator:4.3'
+
+    // Circle image view
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    implementation "com.google.android.material:material:1.10.0-alpha01"
+
+    implementation 'com.github.GrenderG:Toasty:1.5.2'
+
+    //faqs_rv
+    implementation 'com.github.hakobast:dropdown-textview:0.3.1'
+
 }
