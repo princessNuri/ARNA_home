@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/profileSettingsFragment"
+        android:name="com.geeks.ulul.ui.fragment.main.profile.profileSettings.ProfileSettingsFragment"
+        android:label="ProfileSettingsFragment"
+        tools:layout="@layout/fragment_profile_settings">
+        <action
+            android:id="@+id/action_profileSettingsFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_profileSettingsFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+        <action
+            android:id="@+id/action_profileSettingsFragment_to_changeFullNameAndEmailFragment"
+            app:destination="@id/changeFullNameAndEmailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.geeks.ulul.ui.fragment.main.profile.profileSettings.changePassword.ChangePasswordFragment"
+        android:label="ChangePasswordFragment"
+        tools:layout="@layout/fragment_change_password">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.geeks.ulul.ui.fragment.main.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.geeks.ulul.ui.fragment.main.search.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_detailTourFragment"
+            app:destination="@id/detailTourFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_filteredToursFragment"
+            app:destination="@id/filteredToursFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.geeks.ulul.ui.fragment.main.profile.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_favoriteToursFragment"
+            app:destination="@id/favoriteToursFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_faqsFragment2"
+            app:destination="@id/faqsFragment" />
+        <action
+
+            android:id="@+id/action_profileFragment_to_profileSettingsFragment"
+            app:destination="@id/profileSettingsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_supportFragment"
+            app:destination="@id/supportFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailTourFragment"
+        android:name="com.geeks.ulul.ui.fragment.main.detailTour.DetailTourFragment"
+        android:label="DetailTourFragment"
+        tools:layout="@layout/fragment_detail_tour">
+        <action
+            android:id="@+id/action_detailTourFragment_to_addReviewFragment"
+            app:destination="@id/addReviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filteredToursFragment"
+        android:name="com.geeks.ulul.ui.fragment.main.filteredTours.FilteredToursFragment"
+        android:label="fragment_filtered_tours"
+        tools:layout="@layout/fragment_filtered_tours">
+        <action
+            android:id="@+id/action_filteredToursFragment_to_detailTourFragment"
+            app:destination="@id/detailTourFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteToursFragment"
+        android:name="com.geeks.ulul.ui.fragment.main.profile.favoriteTours.FavoriteToursFragment"
+        android:label="FavoriteToursFragment"
+        tools:layout="@layout/fragment_favorite_tours">
+        <action
+            android:id="@+id/action_favoriteToursFragment_to_detailTourFragment"
+            app:destination="@id/detailTourFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addReviewFragment"
+        android:name="com.geeks.ulul.ui.fragment.main.addReview.AddReviewFragment"
+        android:label="fragment_add_review"
+        tools:layout="@layout/fragment_add_review" />
+    <fragment
+        android:id="@+id/changeFullNameAndEmailFragment"
+        android:name="com.geeks.ulul.ui.fragment.main.profile.profileSettings.changeFullNameAndEmail.ChangeFullNameAndEmailFragment"
+        android:label="ChangeFullNameAndEmailFragment"
+        tools:layout="@layout/fragment_change_full_name_and_email" />
+    <fragment
+        android:id="@+id/faqsFragment"
+        android:name="com.geeks.ulul.ui.fragment.main.profile.faqs.FaqsFragment"
+        android:label="FaqsFragment" />
+    <fragment
+        android:id="@+id/supportFragment"
+        android:name="com.geeks.ulul.ui.fragment.main.profile.support.SupportFragment"
+        android:label="fragment_support"
+        tools:layout="@layout/fragment_support" />
+</navigation>

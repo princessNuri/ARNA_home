@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/password_toggle"
+    android:oneshot="true">
+    <item
+        android:drawable="@drawable/ic_eye_open"
+        android:duration="200"/>
+    <item
+        android:drawable="@drawable/ic_eye_closed"
+        android:duration="200"/>
+</set>
