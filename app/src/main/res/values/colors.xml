@@ -34,4 +34,5 @@
     <color name="yellow">#ffee00</color>
     <color name="greyish">#909090</color>
     <color name="grey_dark">#303030</color>
+    <color name="minimal_sts">#606060</color>
 </resources>
