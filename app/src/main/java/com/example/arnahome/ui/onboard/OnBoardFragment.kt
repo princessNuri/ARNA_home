@@ -21,6 +21,7 @@ class OnBoardFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_on_board, container, false)
+
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

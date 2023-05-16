@@ -1,13 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white_back"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.product.productDescription.ProductDescriptionFragment">
 
-    <TextView
+    <ImageView
+        android:id="@+id/iv_product_description"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:layout_height="410dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/pis"
+        android:scaleType="centerCrop"
+        android:background="@drawable/left_bottom_corner"
+        android:layout_marginStart="60dp"
+        tools:ignore="ContentDescription" />
 
-</FrameLayout>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        android:src="@drawable/ic_back"
+        android:backgroundTint="@color/white"/>
+
+
+    <RadioGroup
+        android:layout_width="60dp"
+        android:layout_height="192dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/style_radio_group"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="110dp">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:buttonTint="@color/lightGrey"
+            android:checked="true"
+            android:layout_weight="1"/>
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:buttonTint="@color/beige"
+
+            android:layout_weight="1" />
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_product_name_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_product_description"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/minimal_stand"
+        android:fontFamily="@font/poppins"
+        android:textSize="24sp"
+        android:textColor="@color/grey_dark"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_product_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_product_name_description"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="2dp"
+        android:text="@string/_50"
+        android:fontFamily="@font/poppins"
+        android:textSize="28sp"
+        android:textColor="@color/grey_dark"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/btn_minus"
+        android:layout_width="25dp"
+        android:layout_height="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_product_price"
+        android:text="@string/minus"
+        android:layout_marginEnd="24dp"
+        android:textSize="16sp"
+        android:backgroundTint="@color/grey_light"
+        android:textColor="@color/grey_dark"
+        android:textStyle="bold"/>
+    
+    <TextView
+        android:id="@+id/tv_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:fontFamily="@font/nunito_sans"
+        android:text="@string/_01"
+        android:textStyle="bold"
+        android:layout_marginTop="6dp"
+        android:layout_marginHorizontal="10dp"
+        android:textColor="@color/grey_dark"
+        app:layout_constraintEnd_toStartOf="@id/btn_minus"
+        app:layout_constraintTop_toTopOf="@id/tv_product_price"/>
+
+    <Button
+        android:id="@+id/btn_plus"
+        android:layout_width="25dp"
+        android:layout_height="35dp"
+        app:layout_constraintEnd_toStartOf="@id/tv_quantity"
+        app:layout_constraintTop_toTopOf="@id/tv_product_price"
+        android:text="@string/plus"
+        android:textSize="16sp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@color/grey_light"
+        android:textColor="@color/grey_dark"
+        android:textStyle="bold"/>
+
+
+    <TextView
+        android:id="@+id/tv_product_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/minimal_stand_is_made_of_by_natural_wood_the_design_that_is_very_simple_and_minimal_this_is_truly_one_of_the_best_furnitures_in_any_family_for_now_with_3_different_colors_you_can_easily_select_the_best_match_for_your_home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_product_price"
+        android:textColor="@color/greyish"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="14sp"
+        android:fontFamily="@font/nunito_sans"/>
+
+    <TextView
+        android:id="@+id/tv_product_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_4_5"
+        android:fontFamily="@font/nunito_sans"
+        android:textSize="18sp"
+        android:textColor="@color/grey_dark"
+        android:textStyle="bold"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/iv_star"
+        app:layout_constraintTop_toBottomOf="@id/tv_product_description"
+        android:layout_marginTop="6dp"/>
+
+    <ImageView
+        android:id="@+id/iv_star"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_product_description"
+        android:src="@drawable/ic_star"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_50_reviews"
+        android:textSize="14sp"
+        android:fontFamily="@font/nunito_sans"
+        android:textColor="@color/greyish"
+        app:layout_constraintTop_toBottomOf="@id/tv_product_description"
+        app:layout_constraintStart_toEndOf="@id/tv_product_rating"
+        android:layout_marginTop="9dp"
+        android:layout_marginStart="20dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_style"
+        android:text="@string/add_to_cart"
+        android:textAllCaps="false"
+        android:fontFamily="@font/poppins"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_product_rating"
+        android:layout_marginTop="20dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
