@@ -9,10 +9,10 @@ import retrofit2.http.POST
 
 interface AuthenticationApiService {
 
-    @POST("users/register/")
+    @POST("/api/v1/public/auth/register")
     suspend fun signUp(@Body signUpDto: SignUpDto)
 
-    @POST("users/login/")
+    @POST("/api/v1/public/auth/login")
     suspend fun login(@Body signInDto: SignInDto): SignInResultDto
 
     @POST("users/google/")

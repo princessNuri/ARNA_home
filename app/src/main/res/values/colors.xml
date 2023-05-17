@@ -37,4 +37,5 @@
     <color name="grey_dark">#303030</color>
     <color name="grey_light">#E0E0E0</color>
     <color name="beige">#B4916C</color>
+    <color name="dark_dark_grey">#222222</color>
 </resources>

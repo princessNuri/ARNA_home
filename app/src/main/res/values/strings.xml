@@ -52,4 +52,24 @@
     <string name="notifications">Notifications</string>
     <string name="your_order_123456789_has_been_shipped_successfully">Your order #123456789 has been shipped successfully</string>
     <string name="desc">Please help us to confirm and rate your order to get 10% discount code for next order.</string>
+    <string name="jennie_kim">Jennie Kim</string>
+    <string name="personal_information">Personal Information</string>
+    <string name="jenniekim_gmail_com">jenniekim@gmail.com</string>
+    <string name="address">Address</string>
+    <string name="bishkek_tunguch_2">Bishkek, Tunguch 2</string>
+    <string name="zzzz">************</string>
+    <string name="card">Card</string>
+    <string name="_3947">**** **** **** 3947</string>
+    <string name="check_out_">Check-out</string>
+    <string name="shipping_address">Shipping Address</string>
+    <string name="name_and_last_name">Name and last name</string>
+    <string name="payment">Payment</string>
+    <string name="delivery_method">Delivery Method</string>
+    <string name="fast_2_3days">Fast (2-3days)</string>
+    <string name="order">Order:</string>
+    <string name="delivery">Delivery</string>
+    <string name="_15_00">$ 15.00</string>
+    <string name="_100_00">$ 100.00</string>
+    <string name="submit_order">Submit order</string>
+    <string name="choose_delivery_company">Choose delivery company</string>
 </resources>
