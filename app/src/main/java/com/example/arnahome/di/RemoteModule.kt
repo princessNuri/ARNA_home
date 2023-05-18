@@ -30,8 +30,4 @@ object RemoteModule {
     fun generatePagingApiService(networkClient: NetworkClient) =
         networkClient.generatePagingApiService()
 
-    @Singleton
-    @Provides
-    fun generateToursApiService(networkClient: NetworkClient) =
-        networkClient.generateToursApiService()
 }

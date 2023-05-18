@@ -12,6 +12,6 @@ interface AuthenticationApiService {
     suspend fun signUp(@Body signUpDto: SignUpDto)
 
     @POST("/api/v1/public/auth/login")
-    suspend fun login(@Body signInDto: SignInDto): SignInResultDto
+    suspend fun signIn(@Body signInDto: SignInDto): SignInResultDto
 
 }

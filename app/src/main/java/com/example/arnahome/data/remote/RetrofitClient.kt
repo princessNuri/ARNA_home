@@ -28,8 +28,6 @@ class NetworkClient @Inject constructor(
 
     fun generateUserApiService() = retrofit.createAnApi<UserApiService>()
 
-    fun generateToursApiService() = retrofit.createAnApi<ToursApiService>()
-
 
     class AuthenticationNetworkClient @Inject constructor() {
         private val retrofitNoAuth =

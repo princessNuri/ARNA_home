@@ -6,15 +6,8 @@ import com.example.arnahome.data.remote.apiService.user.UserApiService
 import javax.inject.Inject
 
 class RemoteDataSource @Inject constructor(
-    private val apiService: ToursApiService,
     private val userApiService: UserApiService,
 ) : BaseDataSource() {
-
-    suspend fun getSlugs() = getResult { apiService.getSlugs() }
-
-    suspend fun getTourModelBySlug(slug: String) = getResult { apiService.getTourBySlug(slug) }
-
-    suspend fun getTours(limit: Int) = getResult { apiService.getTours(limit = limit) }
 
     suspend fun addReview(review: AddReviewModel) = getResult { userApiService.addReview(review) }
 
@@ -22,5 +15,4 @@ class RemoteDataSource @Inject constructor(
 
     suspend fun deleteFavorite(slug: String) = getResult { userApiService.deleteFavorite(slug) }
 
-    suspend fun getFavorites(slug: String) = getResult { apiService.getFavorites(slug) }
 }

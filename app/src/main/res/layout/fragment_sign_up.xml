@@ -118,6 +118,7 @@
                 android:textColor="@color/greyish"
                 android:fontFamily="@font/nunito_sans"/>
             <ImageView
+                android:id="@+id/iv_password_visible"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -156,6 +157,7 @@
                 android:textStyle="bold"
                 android:textColor="@color/greyish"/>
             <TextView
+                android:id="@+id/tv_switch_to_sign_up"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sign_in"

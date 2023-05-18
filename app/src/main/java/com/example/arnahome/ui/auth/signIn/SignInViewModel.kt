@@ -1,7 +1,13 @@
 package com.example.arnahome.ui.auth.signIn
 
-import androidx.lifecycle.ViewModel
+import com.example.arnahome.core.base.BaseViewModel
+import com.example.arnahome.data.remote.dto.SignInDto
+import com.example.arnahome.repository.AuthenticationRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 
-class SignInViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
+@HiltViewModel
+class SignInViewModel (private val repository: AuthenticationRepository) : BaseViewModel() {
+    fun getSignIn( signInDto: SignInDto) {
+        repository.signIn(signInDto)
+    }
 }

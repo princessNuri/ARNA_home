@@ -1,33 +1,29 @@
 package com.example.arnahome.ui.auth.signIn
 
-import androidx.lifecycle.ViewModelProvider
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.arnahome.R
+import com.example.arnahome.core.base.BaseFragment
+import com.example.arnahome.data.remote.dto.SignInDto
+import com.example.arnahome.databinding.FragmentSignInBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-class SignInFragment : Fragment() {
+@AndroidEntryPoint
+class SignInFragment : BaseFragment<FragmentSignInBinding, SignInViewModel>(R.layout.fragment_sign_in) {
 
-    companion object {
-        fun newInstance() = SignInFragment()
+    override val binding by viewBinding(FragmentSignInBinding::bind)
+    override val viewModel by viewModels<SignInViewModel>()
+
+    override fun initRequest() {
+        binding.apply {
+            btnSignIn.setOnClickListener {
+                viewModel.getSignIn(
+                    SignInDto(
+                        username = etUsername.text.toString(),
+                        password = etPassword.text.toString()
+                ))
+            }
+
+        }
     }
-
-    private lateinit var viewModel: SignInViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_sign_in, container, false)
-    }
-
-    @Deprecated("Deprecated in Java")
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(SignInViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
-
 }

@@ -21,6 +21,7 @@
         tools:ignore="ContentDescription" />
 
     <ImageButton
+        android:id="@+id/btn_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
@@ -42,6 +43,7 @@
         android:layout_marginTop="110dp">
 
         <RadioButton
+            android:id="@+id/rb_first"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
@@ -49,6 +51,7 @@
             android:checked="true"
             android:layout_weight="1"/>
         <RadioButton
+            android:id="@+id/rb_second"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
@@ -56,6 +59,7 @@
 
             android:layout_weight="1" />
         <RadioButton
+            android:id="@+id/rb_third"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
@@ -173,6 +177,7 @@
         tools:ignore="ContentDescription" />
 
     <TextView
+        android:id="@+id/tv_reviews"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/_50_reviews"
@@ -185,6 +190,7 @@
         android:layout_marginStart="20dp"/>
 
     <Button
+        android:id="@+id/btn_add_to_cart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/button_style"
