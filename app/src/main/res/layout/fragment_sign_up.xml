@@ -52,6 +52,7 @@
             android:layout_marginStart="8dp"/>
 
         <EditText
+            android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAllCaps="false"
@@ -68,6 +69,7 @@
             android:layout_marginStart="8dp"/>
 
         <EditText
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAllCaps="false"
@@ -84,6 +86,7 @@
             android:layout_marginStart="8dp"/>
 
         <EditText
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAllCaps="false"
@@ -104,6 +107,7 @@
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/password_again"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAllCaps="false"
@@ -125,6 +129,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
+            android:id="@+id/btn_sign_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/button_style"

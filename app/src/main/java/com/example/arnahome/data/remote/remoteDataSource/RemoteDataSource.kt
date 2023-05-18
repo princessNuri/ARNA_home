@@ -2,7 +2,6 @@ package com.example.arnahome.data.remote.remoteDataSource
 
 import com.example.arnahome.core.network.baseDataSource.BaseDataSource
 import com.example.arnahome.data.model.AddReviewModel
-import com.example.arnahome.data.remote.apiService.tours.ToursApiService
 import com.example.arnahome.data.remote.apiService.user.UserApiService
 import javax.inject.Inject
 

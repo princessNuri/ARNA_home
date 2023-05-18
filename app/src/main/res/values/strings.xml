@@ -72,4 +72,22 @@
     <string name="_100_00">$ 100.00</string>
     <string name="submit_order">Submit order</string>
     <string name="choose_delivery_company">Choose delivery company</string>
+    <string name="choose_delivery_period">Choose delivery period</string>
+    <string name="medium_2_3weeks">Medium (2-3weeks)</string>
+    <string name="slow_2_3months">Slow (2-3months)</string>
+    <string name="_2_00">$ 2.00</string>
+    <string name="_6_00">$ 6.00</string>
+    <string name="_10_00">$ 10.00</string>
+    <string name="submit">Submit</string>
+    <string name="adding_new_card">Adding new card</string>
+    <string name="choose_card">Choose card</string>
+    <string name="master_card">Master Card</string>
+    <string name="visa">Visa</string>
+    <string name="card_number">Card number</string>
+    <string name="_1234_5678_9012_3456">1234 5678 9012 3456</string>
+    <string name="aizat_madumarova">AIZAT MADUMAROVA</string>
+    <string name="security_code">Security code</string>
+    <string name="z">******</string>
+    <string name="expiration_date">Expiration Date</string>
+    <string name="mm_yy">MM/YY</string>
 </resources>
