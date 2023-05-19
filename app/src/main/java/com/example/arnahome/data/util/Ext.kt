@@ -10,8 +10,6 @@ import androidx.interpolator.view.animation.FastOutSlowInInterpolator
 import com.bumptech.glide.Glide
 import com.example.arnahome.R
 import com.example.arnahome.data.model.FilterModel
-import com.example.arnahome.data.model.Region
-import com.example.arnahome.data.model.TourImage
 import com.example.arnahome.data.util.Constant.CORRECT_IMAGE_URL
 import com.example.arnahome.data.util.Constant.INVALID_IMAGE_URL
 import com.google.android.material.textfield.TextInputLayout
@@ -23,20 +21,6 @@ fun FilterModel.changeFilter(newFilter: FilterModel) {
     this.complexity = newFilter.complexity
     this.duration = newFilter.duration
     this.price_max = newFilter.price_max
-}
-
-fun List<Region>.getRegions(): String {
-    var result = ""
-    if (this.isNotEmpty()) {
-        for (i in 0 until this.size) {
-            result += if (i != this.size - 1) {
-                this[i].name + ", "
-            } else {
-                this[i].name
-            }
-        }
-    }
-    return result
 }
 
 fun Intent.share(text: String?): Intent? {
@@ -64,28 +48,6 @@ fun String.getDuration(): String {
         7 -> result += "дней"
     }
     return result
-}
-
-fun List<TourImage>.getMainImage(): String {
-    if (this.isNotEmpty()) {
-        for (i in this) {
-            if (i.is_main) {
-                return i.images.correctUrl()
-            }
-        }
-    }
-    return ""
-}
-
-fun List<TourImage>.getMainImageFavorite(): String {
-    if (this.isNotEmpty()) {
-        for (i in this) {
-            if (i.is_main) {
-                return CORRECT_IMAGE_URL + i.images
-            }
-        }
-    }
-    return ""
 }
 
 fun Context.showToast(text: String) {

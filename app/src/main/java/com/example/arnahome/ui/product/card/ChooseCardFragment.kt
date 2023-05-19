@@ -1,32 +1,17 @@
 package com.example.arnahome.ui.product.card
 
-import androidx.lifecycle.ViewModelProvider
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.arnahome.R
+import com.example.arnahome.core.base.BaseFragment
+import com.example.arnahome.databinding.FragmentChooseCardBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-class ChooseCardFragment : Fragment() {
+@AndroidEntryPoint
+class ChooseCardFragment : BaseFragment<FragmentChooseCardBinding, ChooseCardViewModel>(R.layout.fragment_choose_card) {
 
-    companion object {
-        fun newInstance() = ChooseCardFragment()
-    }
+    override val binding by viewBinding(FragmentChooseCardBinding::bind)
+    override val viewModel by viewModels<ChooseCardViewModel>()
 
-    private lateinit var viewModel: ChooseCardViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_choose_card, container, false)
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ChooseCardViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
 
 }

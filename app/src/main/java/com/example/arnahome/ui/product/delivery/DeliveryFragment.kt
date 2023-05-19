@@ -1,32 +1,19 @@
 package com.example.arnahome.ui.product.delivery
 
-import androidx.lifecycle.ViewModelProvider
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.arnahome.R
+import com.example.arnahome.core.base.BaseFragment
+import com.example.arnahome.databinding.FragmentDeliveryBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-class DeliveryFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = DeliveryFragment()
-    }
+@AndroidEntryPoint
+class DeliveryFragment : BaseFragment<FragmentDeliveryBinding, DeliveryViewModel>(R.layout.fragment_delivery) {
 
-    private lateinit var viewModel: DeliveryViewModel
+    override val binding by viewBinding(FragmentDeliveryBinding::bind)
+    override val viewModel by viewModels<DeliveryViewModel>()
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_delivery, container, false)
-    }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(DeliveryViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
 
 }

@@ -1,32 +1,18 @@
 package com.example.arnahome.ui.product.payment
 
-import androidx.lifecycle.ViewModelProvider
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.arnahome.R
+import com.example.arnahome.core.base.BaseFragment
+import com.example.arnahome.databinding.FragmentPaymentMethodBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-class PaymentMethodFragment : Fragment() {
+@AndroidEntryPoint
+class PaymentMethodFragment : BaseFragment<FragmentPaymentMethodBinding, PaymentMethodViewModel>(R.layout.fragment_payment_method) {
 
-    companion object {
-        fun newInstance() = PaymentMethodFragment()
-    }
+    override val binding by viewBinding(FragmentPaymentMethodBinding::bind)
+    override val viewModel by viewModels<PaymentMethodViewModel>()
 
-    private lateinit var viewModel: PaymentMethodViewModel
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_payment_method, container, false)
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(PaymentMethodViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
 
 }

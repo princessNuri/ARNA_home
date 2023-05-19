@@ -1,7 +1,11 @@
 package com.example.arnahome.ui.main.profile
 
-import androidx.lifecycle.ViewModel
+import com.example.arnahome.core.base.BaseViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class ProfileViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
+@HiltViewModel
+class ProfileViewModel @Inject constructor(): BaseViewModel() {
+
+
 }

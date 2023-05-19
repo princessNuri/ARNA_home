@@ -1,32 +1,20 @@
 package com.example.arnahome.ui.main.favorite
 
-import androidx.lifecycle.ViewModelProvider
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.arnahome.R
+import com.example.arnahome.core.base.BaseFragment
+import com.example.arnahome.databinding.FragmentFavoriteBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-class FavoriteFragment : Fragment() {
+@AndroidEntryPoint
+class FavoriteFragment :  BaseFragment<FragmentFavoriteBinding, FavoriteViewModel>(R.layout.fragment_favorite) {
 
-    companion object {
-        fun newInstance() = FavoriteFragment()
-    }
+    override val binding by viewBinding(FragmentFavoriteBinding::bind)
+    override val viewModel by viewModels<FavoriteViewModel>()
 
-    private lateinit var viewModel: FavoriteViewModel
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_favorite, container, false)
-    }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(FavoriteViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
+
 
 }
