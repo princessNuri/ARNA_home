@@ -6,7 +6,6 @@ import com.example.arnahome.data.remote.NetworkFastBuilder.Companion.provideRetr
 import com.example.arnahome.data.remote.apiService.auth.AuthenticationApiService
 import com.example.arnahome.data.remote.apiService.auth.RefreshAccessTokenApiService
 import com.example.arnahome.data.remote.apiService.tours.PagingApiService
-import com.example.arnahome.data.remote.apiService.tours.ToursApiService
 import com.example.arnahome.data.remote.apiService.user.UserApiService
 import com.example.arnahome.data.remote.interceptor.AuthenticationInterceptor
 import retrofit2.Retrofit
@@ -28,8 +27,6 @@ class NetworkClient @Inject constructor(
     fun generatePagingApiService() = retrofit.createAnApi<PagingApiService>()
 
     fun generateUserApiService() = retrofit.createAnApi<UserApiService>()
-
-    fun generateToursApiService() = retrofit.createAnApi<ToursApiService>()
 
 
     class AuthenticationNetworkClient @Inject constructor() {

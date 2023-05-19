@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_margin="8dp"
+    tools:ignore="UseCompoundDrawables">
 
-    <com.google.android.material.button.MaterialButton
+    <ImageView
+        android:id="@+id/ic_category_bg"
         android:layout_width="44dp"
-        android:layout_height="54dp"
+        android:layout_height="44dp"
         android:layout_gravity="top|center"
-        app:cornerRadius="12dp"/>
+        android:layout_margin="4dp"
+        android:src="@drawable/ic_popular">
+
+    </ImageView>
     <TextView
+        android:id="@+id/tv_category_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/popular"

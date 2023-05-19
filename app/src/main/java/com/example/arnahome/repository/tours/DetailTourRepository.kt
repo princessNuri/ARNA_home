@@ -11,7 +11,6 @@ class DetailTourRepository @Inject constructor(
     private val apiService: PagingApiService,
 ) : BaseRepository() {
 
-    fun getTourBySlug(slug: String) = doRequest { dataSource.getTourModelBySlug(slug) }
 
     fun getReviewsBySlug(slug: String) =
         doPagingRequest(ReviewPagingSource(apiService, slug = slug), pageSize = 10)
@@ -20,5 +19,4 @@ class DetailTourRepository @Inject constructor(
 
     fun deleteFavorite(slug: String) = doRequest { dataSource.deleteFavorite(slug) }
 
-    fun getFavorites(slug: String) = doRequest { dataSource.getFavorites(slug) }
 }
