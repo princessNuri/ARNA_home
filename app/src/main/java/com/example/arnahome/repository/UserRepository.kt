@@ -13,18 +13,10 @@ class UserRepository @Inject constructor(
     private val userPreferences: UserPreferences
 ) : BaseRepository() {
 
-    fun getUserProfile(id: Int = userPreferences.userID.toString().toInt()) = makeNetworkRequest {
-        userApiService.getUserProfile(id)
-    }
-
     fun deleteAccount() = makeNetworkRequest {
         userApiService.deleteAccount(
             userPreferences.userID.toString().toInt()
         )
-    }
-
-    fun getFavoriteTours() = makeNetworkRequest {
-        userApiService.fetchFavorites(userPreferences.userID.toString().toInt()).favoriteTour
     }
 
     fun changePassword(

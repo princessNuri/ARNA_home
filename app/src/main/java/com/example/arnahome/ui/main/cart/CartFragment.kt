@@ -1,32 +1,17 @@
 package com.example.arnahome.ui.main.cart
 
-import androidx.lifecycle.ViewModelProvider
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.arnahome.R
+import com.example.arnahome.core.base.BaseFragment
+import com.example.arnahome.databinding.FragmentCartBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-class CartFragment : Fragment() {
+@AndroidEntryPoint
+class CartFragment : BaseFragment<FragmentCartBinding, CartViewModel>(R.layout.fragment_cart) {
 
-    companion object {
-        fun newInstance() = CartFragment()
-    }
+    override val binding by viewBinding(FragmentCartBinding::bind)
+    override val viewModel by viewModels<CartViewModel>()
 
-    private lateinit var viewModel: CartViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_cart, container, false)
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(CartViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
 
 }

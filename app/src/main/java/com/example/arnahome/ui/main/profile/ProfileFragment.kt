@@ -1,32 +1,17 @@
 package com.example.arnahome.ui.main.profile
 
-import androidx.lifecycle.ViewModelProvider
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.arnahome.R
+import com.example.arnahome.core.base.BaseFragment
+import com.example.arnahome.databinding.FragmentProfileBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-class ProfileFragment : Fragment() {
+@AndroidEntryPoint
+class ProfileFragment : BaseFragment<FragmentProfileBinding, ProfileViewModel>(R.layout.fragment_profile) {
 
-    companion object {
-        fun newInstance() = ProfileFragment()
-    }
+    override val binding by viewBinding(FragmentProfileBinding::bind)
+    override val viewModel by viewModels<ProfileViewModel>()
 
-    private lateinit var viewModel: ProfileViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_profile, container, false)
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ProfileViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
 
 }

@@ -49,5 +49,39 @@
         android:name="com.example.arnahome.ui.auth.signUp.SignUpFragment"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up" />
+    <fragment
+        android:id="@+id/favoriteFragment2"
+        android:name="com.example.arnahome.ui.main.favorite.FavoriteFragment"
+        android:label="FavoriteFragment" />
+    <fragment
+        android:id="@+id/checkoutFragment2"
+        android:name="com.example.arnahome.ui.product.checkout.CheckoutFragment"
+        android:label="fragment_checkout"
+        tools:layout="@layout/fragment_checkout" />
+    <fragment
+        android:id="@+id/chooseCardFragment2"
+        android:name="com.example.arnahome.ui.product.card.ChooseCardFragment"
+        android:label="fragment_choose_card"
+        tools:layout="@layout/fragment_choose_card" />
+    <fragment
+        android:id="@+id/deliveryFragment2"
+        android:name="com.example.arnahome.ui.product.delivery.DeliveryFragment"
+        android:label="fragment_delivery"
+        tools:layout="@layout/fragment_delivery" />
+    <fragment
+        android:id="@+id/paymentMethodFragment2"
+        android:name="com.example.arnahome.ui.product.payment.PaymentMethodFragment"
+        android:label="fragment_payment_method"
+        tools:layout="@layout/fragment_payment_method" />
+    <fragment
+        android:id="@+id/productDescriptionFragment2"
+        android:name="com.example.arnahome.ui.product.productDescription.ProductDescriptionFragment"
+        android:label="fragment_product_description"
+        tools:layout="@layout/fragment_product_description" />
+    <fragment
+        android:id="@+id/productDescriptionUnavailableFragment2"
+        android:name="com.example.arnahome.ui.product.productDescriptionUnavailable.ProductDescriptionUnavailableFragment"
+        android:label="fragment_product_description_unavailable"
+        tools:layout="@layout/fragment_product_description_unavailable" />
 
 </navigation>

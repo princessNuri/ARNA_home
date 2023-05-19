@@ -1,33 +1,17 @@
 package com.example.arnahome.ui.onboard
 
-import androidx.lifecycle.ViewModelProvider
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.arnahome.R
+import com.example.arnahome.core.base.BaseFragment
+import com.example.arnahome.databinding.FragmentOnBoardBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-class OnBoardFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = OnBoardFragment()
-    }
+@AndroidEntryPoint
+class OnBoardFragment : BaseFragment<FragmentOnBoardBinding, OnBoardViewModel>(R.layout.fragment_on_board) {
 
-    private lateinit var viewModel: OnBoardViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_on_board, container, false)
-
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(OnBoardViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
+    override val binding by viewBinding(FragmentOnBoardBinding::bind)
+    override val viewModel by viewModels<OnBoardViewModel>()
 
 }

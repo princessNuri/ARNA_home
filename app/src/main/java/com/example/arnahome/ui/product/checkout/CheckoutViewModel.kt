@@ -1,7 +1,11 @@
 package com.example.arnahome.ui.product.checkout
 
-import androidx.lifecycle.ViewModel
+import com.example.arnahome.core.base.BaseViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class CheckoutViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
+@HiltViewModel
+class CheckoutViewModel @Inject constructor(): BaseViewModel() {
+
+
 }
