@@ -14,11 +14,6 @@ fun SharedPreferences.put(key: String, value: Any) =
         }
     }.apply()
 
-/**
- * Extension function for [SharedPreferences] to modify it synchronously
- * @param key is the key for [SharedPreferences]
- * @param value is the data which will be stored into [SharedPreferences]
- * */
 @SuppressLint("ApplySharedPref")
 fun SharedPreferences.writeSync(key: String, value: Any) =
     this.edit()?.apply {
@@ -32,12 +27,6 @@ fun SharedPreferences.writeSync(key: String, value: Any) =
         commit()
     }
 
-/**
- * Extension to clear [SharedPreferences]
- * */
 fun SharedPreferences.clear() = this.edit().clear().apply()
 
-/**
- * Extension function to remove a key-value pair from [SharedPreferences]
- * */
 fun SharedPreferences.remove(key: String) = this.edit().remove(key).apply()
