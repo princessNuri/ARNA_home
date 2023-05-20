@@ -9,19 +9,10 @@ import android.widget.Toast
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator
 import com.bumptech.glide.Glide
 import com.example.arnahome.R
-import com.example.arnahome.data.model.FilterModel
 import com.example.arnahome.data.util.Constant.CORRECT_IMAGE_URL
 import com.example.arnahome.data.util.Constant.INVALID_IMAGE_URL
 import com.google.android.material.textfield.TextInputLayout
 
-
-fun FilterModel.changeFilter(newFilter: FilterModel) {
-    this.category = newFilter.category
-    this.date_departure = newFilter.date_departure
-    this.complexity = newFilter.complexity
-    this.duration = newFilter.duration
-    this.price_max = newFilter.price_max
-}
 
 fun Intent.share(text: String?): Intent? {
     this.apply {

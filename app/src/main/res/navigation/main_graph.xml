@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/signUpFragment2">
 
 
     <fragment
@@ -81,9 +81,5 @@
         android:name="com.example.arnahome.ui.auth.signIn.SignInFragment"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up" />
-    <fragment
-        android:id="@+id/settingsFragment2"
-        android:name="com.example.arnahome.ui.main.profile.settings.SettingsFragment"
-        android:label="fragment_settings"
-        tools:layout="@layout/fragment_settings" />
+
 </navigation>

@@ -1,6 +1,5 @@
 package com.example.arnahome.data.remote.apiService.user
 
-import com.example.arnahome.data.model.AddReviewModel
 import com.example.arnahome.data.remote.dto.ChangeUsernameOrEmailDto
 import com.example.arnahome.data.remote.dto.changePassword.changePasswordDto
 import retrofit2.Response
@@ -11,8 +10,8 @@ interface UserApiService {
     @DELETE("profiles/profile/{id}/")
     suspend fun deleteAccount(@Path("id") id: Int)
 
-    @POST("home/review/")
-    suspend fun addReview(@Body addReviewModel: AddReviewModel): Response<Unit>
+//    @POST("home/review/")
+//    suspend fun addReview(@Body addReviewModel: AddReviewModel): Response<Unit>
 
     @PATCH("profiles/change-password/{id}/")
     suspend fun changePassword(@Path("id") id: Int, @Body changePasswordDto: changePasswordDto)
