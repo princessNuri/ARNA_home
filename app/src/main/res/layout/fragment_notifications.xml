@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.main.notifications.NotificationsFragment">
 
-    <ImageView
+    <SearchView
         android:id="@+id/btn_search"
         android:layout_width="28dp"
         android:layout_height="28dp"
@@ -14,7 +14,6 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="24dp"
         android:layout_marginStart="24dp"
-        android:src="@drawable/ic_search_home"
         android:backgroundTint="@color/white"/>
 
     <TextView

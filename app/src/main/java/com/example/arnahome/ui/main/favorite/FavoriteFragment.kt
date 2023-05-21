@@ -12,9 +12,4 @@ class FavoriteFragment :  BaseFragment<FragmentFavoriteBinding, FavoriteViewMode
 
     override val binding by viewBinding(FragmentFavoriteBinding::bind)
     override val viewModel by viewModels<FavoriteViewModel>()
-
-
-
-
-
 }

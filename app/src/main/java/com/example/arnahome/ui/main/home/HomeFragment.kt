@@ -16,7 +16,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(R.layout.f
 
     override val binding by viewBinding(FragmentHomeBinding::bind)
     override val viewModel by viewModels<HomeViewModel>()
-    private val walkingAdapter by lazy { HomeAdapter(products) }
+//  private val walkingAdapter by lazy { HomeAdapter(products) }\I    QA\
 
 
 
