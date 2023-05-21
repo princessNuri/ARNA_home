@@ -4,7 +4,6 @@ import androidx.fragment.app.viewModels
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.arnahome.R
 import com.example.arnahome.core.base.BaseFragment
-import com.example.arnahome.data.remote.dto.SignUpDto
 import com.example.arnahome.databinding.FragmentSignUpBinding
 import dagger.hilt.android.AndroidEntryPoint
 
