@@ -1,5 +1,7 @@
 package com.example.arnahome.ui.main.home
 
+import android.os.Bundle
+import android.view.View
 import androidx.fragment.app.viewModels
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.arnahome.R
@@ -11,14 +13,18 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(R.layout.fragment_home) {
 
-     val products = arrayListOf<ProductResponse.Content>()
+     var products = arrayListOf<ProductResponse.Content>()
 
 
     override val binding by viewBinding(FragmentHomeBinding::bind)
     override val viewModel by viewModels<HomeViewModel>()
     private val walkingAdapter by lazy { HomeAdapter(products) }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        //products= arrayListOf( ProductResponse.Content())
 
+    }
 
 
 
