@@ -1,7 +1,12 @@
 package com.example.arnahome.ui.onboard
 
-import androidx.lifecycle.ViewModel
+import com.example.arnahome.core.base.BaseViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class OnBoardViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
+
+@HiltViewModel
+class OnBoardViewModel @Inject constructor(): BaseViewModel() {
+
+
 }

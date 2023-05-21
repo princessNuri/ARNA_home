@@ -3,11 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/auth_and_reg_graph"
-    app:startDestination="@id/entryFragment">
+    app:startDestination="@id/signUpFragment">
 
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.geeks.ulul.ui.fragment.authAndReg.signUp.SignUpFragment"
         android:label="SignUpFragment"
         tools:layout="@layout/fragment_sign_up">
         <action
@@ -16,20 +15,7 @@
     </fragment>
 
     <fragment
-        android:id="@+id/entryFragment"
-        android:name="com.geeks.ulul.ui.fragment.authAndReg.entry.EntryFragment"
-        android:label="EntryFragment"
-        tools:layout="@layout/fragment_entry">
-        <action
-            android:id="@+id/action_entryFragment_to_signInFragment"
-            app:destination="@id/signInFragment" />
-        <action
-            android:id="@+id/action_entryFragment_to_signUpFragment"
-            app:destination="@id/signUpFragment" />
-    </fragment>
-    <fragment
         android:id="@+id/signInFragment"
-        android:name="com.geeks.ulul.ui.fragment.authAndReg.signIn.SignInFragment"
         android:label="SignInFragment"
         tools:layout="@layout/fragment_sign_in">
         <action

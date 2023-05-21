@@ -3,115 +3,83 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/signUpFragment2">
+
 
     <fragment
-        android:id="@+id/profileSettingsFragment"
-        android:name="com.geeks.ulul.ui.fragment.main.profile.profileSettings.ProfileSettingsFragment"
-        android:label="ProfileSettingsFragment"
-        tools:layout="@layout/fragment_profile_settings">
-        <action
-            android:id="@+id/action_profileSettingsFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
-        <action
-            android:id="@+id/action_profileSettingsFragment_to_changePasswordFragment"
-            app:destination="@id/changePasswordFragment" />
-        <action
-            android:id="@+id/action_profileSettingsFragment_to_changeFullNameAndEmailFragment"
-            app:destination="@id/changeFullNameAndEmailFragment" />
-    </fragment>
-
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.arnahome.ui.main.favorite.FavoriteFragment"
+        android:label="FavoriteFragment" />
     <fragment
-        android:id="@+id/changePasswordFragment"
-        android:name="com.geeks.ulul.ui.fragment.main.profile.profileSettings.changePassword.ChangePasswordFragment"
-        android:label="ChangePasswordFragment"
-        tools:layout="@layout/fragment_change_password">
-
-    </fragment>
-
+        android:id="@+id/signUpFragment2"
+        android:name="com.example.arnahome.ui.auth.signUp.SignUpFragment"
+        android:label="SignUpFragment" />
     <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.geeks.ulul.ui.fragment.main.home.HomeFragment"
-        android:label="HomeFragment"
+        android:id="@+id/cartFragment"
+        android:name="com.example.arnahome.ui.main.cart.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.example.arnahome.ui.product.checkout.CheckoutFragment"
+        android:label="fragment_checkout"
+        tools:layout="@layout/fragment_checkout" />
+    <fragment
+        android:id="@+id/chooseCardFragment"
+        android:name="com.example.arnahome.ui.product.card.ChooseCardFragment"
+        android:label="fragment_choose_card"
+        tools:layout="@layout/fragment_choose_card" />
+    <fragment
+        android:id="@+id/deliveryFragment"
+        android:name="com.example.arnahome.ui.product.delivery.DeliveryFragment"
+        android:label="fragment_delivery"
+        tools:layout="@layout/fragment_delivery" />
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.example.arnahome.ui.main.home.HomeFragment"
+        android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
-
     <fragment
-        android:id="@+id/searchFragment"
-        android:name="com.geeks.ulul.ui.fragment.main.search.SearchFragment"
-        android:label="SearchFragment"
-        tools:layout="@layout/fragment_search">
-        <action
-            android:id="@+id/action_searchFragment_to_detailTourFragment"
-            app:destination="@id/detailTourFragment" />
-        <action
-            android:id="@+id/action_searchFragment_to_filteredToursFragment"
-            app:destination="@id/filteredToursFragment" />
-    </fragment>
-
+        android:id="@+id/notificationsFragment"
+        android:name="com.example.arnahome.ui.main.notifications.NotificationsFragment"
+        android:label="fragment_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/paymentMethodFragment"
+        android:name="com.example.arnahome.ui.product.payment.PaymentMethodFragment"
+        android:label="fragment_payment_method"
+        tools:layout="@layout/fragment_payment_method" />
+    <fragment
+        android:id="@+id/onBoardFragment"
+        android:name="com.example.arnahome.ui.onboard.OnBoardFragment"
+        android:label="fragment_on_board"
+        tools:layout="@layout/fragment_on_board" />
+    <navigation android:id="@+id/navigation2"
+        app:startDestination="@id/navigation">
+        <navigation
+            android:id="@+id/navigation"
+            app:startDestination="@id/productDescriptionUnavailableFragment">
+            <fragment
+                android:id="@+id/productDescriptionUnavailableFragment"
+                android:name="com.example.arnahome.ui.product.productDescriptionUnavailable.ProductDescriptionUnavailableFragment"
+                android:label="fragment_product_description_unavailable"
+                tools:layout="@layout/fragment_product_description_unavailable" />
+        </navigation>
+    </navigation>
+    <fragment
+        android:id="@+id/productDescriptionFragment"
+        android:name="com.example.arnahome.ui.product.productDescription.ProductDescriptionFragment"
+        android:label="fragment_product_description"
+        tools:layout="@layout/fragment_product_description" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.geeks.ulul.ui.fragment.main.profile.ProfileFragment"
-        android:label="ProfileFragment"
-        tools:layout="@layout/fragment_profile">
-        <action
-            android:id="@+id/action_profileFragment_to_favoriteToursFragment"
-            app:destination="@id/favoriteToursFragment" />
-        <action
-            android:id="@+id/action_profileFragment_to_faqsFragment2"
-            app:destination="@id/faqsFragment" />
-        <action
+        android:name="com.example.arnahome.ui.main.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/signInFragment2"
+        android:name="com.example.arnahome.ui.auth.signIn.SignInFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" />
 
-            android:id="@+id/action_profileFragment_to_profileSettingsFragment"
-            app:destination="@id/profileSettingsFragment" />
-        <action
-            android:id="@+id/action_profileFragment_to_supportFragment"
-            app:destination="@id/supportFragment" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/detailTourFragment"
-        android:name="com.geeks.ulul.ui.fragment.main.detailTour.DetailTourFragment"
-        android:label="DetailTourFragment"
-        tools:layout="@layout/fragment_detail_tour">
-        <action
-            android:id="@+id/action_detailTourFragment_to_addReviewFragment"
-            app:destination="@id/addReviewFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/filteredToursFragment"
-        android:name="com.geeks.ulul.ui.fragment.main.filteredTours.FilteredToursFragment"
-        android:label="fragment_filtered_tours"
-        tools:layout="@layout/fragment_filtered_tours">
-        <action
-            android:id="@+id/action_filteredToursFragment_to_detailTourFragment"
-            app:destination="@id/detailTourFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/favoriteToursFragment"
-        android:name="com.geeks.ulul.ui.fragment.main.profile.favoriteTours.FavoriteToursFragment"
-        android:label="FavoriteToursFragment"
-        tools:layout="@layout/fragment_favorite_tours">
-        <action
-            android:id="@+id/action_favoriteToursFragment_to_detailTourFragment"
-            app:destination="@id/detailTourFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/addReviewFragment"
-        android:name="com.geeks.ulul.ui.fragment.main.addReview.AddReviewFragment"
-        android:label="fragment_add_review"
-        tools:layout="@layout/fragment_add_review" />
-    <fragment
-        android:id="@+id/changeFullNameAndEmailFragment"
-        android:name="com.geeks.ulul.ui.fragment.main.profile.profileSettings.changeFullNameAndEmail.ChangeFullNameAndEmailFragment"
-        android:label="ChangeFullNameAndEmailFragment"
-        tools:layout="@layout/fragment_change_full_name_and_email" />
-    <fragment
-        android:id="@+id/faqsFragment"
-        android:name="com.geeks.ulul.ui.fragment.main.profile.faqs.FaqsFragment"
-        android:label="FaqsFragment" />
-    <fragment
-        android:id="@+id/supportFragment"
-        android:name="com.geeks.ulul.ui.fragment.main.profile.support.SupportFragment"
-        android:label="fragment_support"
-        tools:layout="@layout/fragment_support" />
 </navigation>

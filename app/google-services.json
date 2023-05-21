@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "826276474145",
+    "project_id": "arna-home",
+    "storage_bucket": "arna-home.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826276474145:android:a6c2e8bd6e590314e96260",
+        "android_client_info": {
+          "package_name": "com.example.arnahome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "826276474145-mph9g7p3v78u56rnne96enpsu2ncrjqc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZyztZ6d7UglCPqN1c7g4AWbOfNei8IKs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "826276474145-mph9g7p3v78u56rnne96enpsu2ncrjqc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

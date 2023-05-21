@@ -1,7 +1,9 @@
 package com.example.arnahome.ui.product.productDescriptionUnavailable
 
-import androidx.lifecycle.ViewModel
+import com.example.arnahome.core.base.BaseViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class ProductDescriptionUnavailableViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
+@HiltViewModel
+class ProductDescriptionUnavailableViewModel @Inject constructor(): BaseViewModel() {
 }

@@ -1,32 +1,19 @@
 package com.example.arnahome.ui.product.productDescription
 
-import androidx.lifecycle.ViewModelProvider
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.arnahome.R
+import com.example.arnahome.core.base.BaseFragment
+import com.example.arnahome.databinding.FragmentProductDescriptionBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-class ProductDescriptionFragment : Fragment() {
+@AndroidEntryPoint
+class ProductDescriptionFragment : BaseFragment<
+        FragmentProductDescriptionBinding, ProductDescriptionViewModel>(R.layout.fragment_product_description) {
 
-    companion object {
-        fun newInstance() = ProductDescriptionFragment()
-    }
+    override val binding by viewBinding(FragmentProductDescriptionBinding::bind)
+    override val viewModel by viewModels<ProductDescriptionViewModel>()
 
-    private lateinit var viewModel: ProductDescriptionViewModel
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_product_description, container, false)
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ProductDescriptionViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
 
 }

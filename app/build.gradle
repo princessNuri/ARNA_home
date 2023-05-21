@@ -12,7 +12,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.arnahome"
-        minSdk 33
+        minSdk 31
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -27,7 +27,7 @@ android {
         }
         debug {
             minifyEnabled false
-            buildConfigField('String', 'BASE_URL', "\"http://164.92.190.147:8880/\"")
+            buildConfigField('String', 'BASE_URL', "\"https://8c37-158-181-129-169.ngrok-free.app\"")
         }
     }
     compileOptions {
@@ -58,8 +58,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     // View Binding property delegate (reflection-free flavor)
-//    implementation 'com.github.kirich1409:viewbindingpropertydelegate-noreflection:1.5.8'
-
+    implementation 'com.github.kirich1409:viewbindingpropertydelegate-noreflection:1.5.8'
     // Navigation Component
     def nav_version = "2.5.3"
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
@@ -101,9 +100,5 @@ dependencies {
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'com.google.gms:google-services:4.3.15'
 
-//    implementation 'com.github.GrenderG:Toasty:1.5.2'
-
-    //faqs_rv
-//    implementation 'com.github.hakobast:dropdown-textview:0.3.1'
-
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
 }

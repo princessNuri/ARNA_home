@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/category_bedroom"
+        android:title="@string/bedroom_category"/>
+
+    <item
+        android:id="@+id/category_living_room"
+        android:title="@string/living_room"/>
+    <item
+        android:id="@+id/category_kitchen"
+        android:title="@string/kitchen"/>
+    <item
+        android:id="@+id/category_bath"
+        android:title="@string/bath"/>
+    <item
+        android:id="@+id/category_etno"
+        android:title="@string/etno"/>
+</menu>
