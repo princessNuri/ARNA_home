@@ -27,7 +27,7 @@ android {
         }
         debug {
             minifyEnabled false
-            buildConfigField('String', 'BASE_URL', "\"https://8c37-158-181-129-169.ngrok-free.app\"")
+            buildConfigField('String', 'BASE_URL', "\"https://dd91-158-181-129-169.ngrok-free.app\"")
         }
     }
     compileOptions {

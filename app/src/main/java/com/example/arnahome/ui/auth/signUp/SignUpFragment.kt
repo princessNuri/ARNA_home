@@ -17,14 +17,16 @@ class SignUpFragment: BaseFragment<FragmentSignUpBinding, SignUpViewModel>(R.lay
     override fun initRequest() {
         binding.apply {
             btnSignUp.setOnClickListener {
-            viewModel.getSignUp(
-                SignUpDto(
-                    username =username.text.toString(),
-                    email = email.text.toString(),
-                    password = password.text.toString(),
-                    password_again = passwordAgain.text.toString()
-                )
-            )}
+//            viewModel.getSignUp(
+//                SignUpDto(
+//                    username =username.text.toString(),
+//                    email = email.text.toString(),
+//                    password = password.text.toString(),
+//                    password_again = passwordAgain.text.toString()
+//                )
+//            )
+            }
         }
+
     }
 }
