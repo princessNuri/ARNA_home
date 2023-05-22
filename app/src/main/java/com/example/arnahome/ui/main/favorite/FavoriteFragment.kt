@@ -15,6 +15,4 @@ class FavoriteFragment :  BaseFragment<FragmentFavoriteBinding, FavoriteViewMode
 
 
 
-
-
 }
